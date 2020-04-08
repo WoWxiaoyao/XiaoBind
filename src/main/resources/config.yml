@@ -1,0 +1,34 @@
+#请勿调整该版本号 否则会导致配置文件更新异常
+version: 1.0.0
+
+Tag:
+  #绑定lore
+  Bind: "&6绑定: &c{player}"
+  #请和上方保持一致 包括彩色符号
+  Start: "&6绑定: &c"
+  #请和上方保持一致 物品lore含有空格会导致list无法正常判断 此项为绑定包含关键字
+  Contains: "绑定"
+  #捡到后绑定
+  Pickup: "&4拾取后绑定"
+  #使用后绑定
+  Use: "&4使用后绑定"
+  #装备后绑定
+  Equip: "&4装备后绑定"
+
+#设置
+Setting:
+  #是否检测（盾牌位/副手位） [不知道为什么点击不触发InventoryClickEvent 所以增加了一个定时检测来检测绑定]
+  CheckOffHand:
+    Enable: true
+    #检测周期 20则为1秒
+    Delay: 20
+  #是否允许丢弃绑定物品 true 允许   false 禁止
+  AllowDrop: false
+  #是否允许在Inv内点击绑定物品 （不是本人绑定情况下才会触发）
+  AllowClick: false
+  #是否允许切换/手持绑定物品 （不是本人绑定情况下才会触发）
+  AllowHeld: false
+  #是否丢弃后删除绑定物品 （不推荐启用 当服务器卡顿有可能与恢复绑定物品冲突）
+  DeleteOnDrop: false
+  #绑定物品是否死亡不掉落 （仅恢复已经掉落 并且是本人绑定的物品）
+  KeepOnDeath: true

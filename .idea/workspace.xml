@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="XiaoBind:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b9a60a7-8c0b-481e-904f-caa564112cc3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZfRbQCfnzuyddE44x3x6rrQoUg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/新建文件夹" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b9a60a7-8c0b-481e-904f-caa564112cc3" name="Default Changelist" comment="" />
+      <created>1585228232669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585228232669</updated>
+      <workItem from="1585228234555" duration="4439000" />
+      <workItem from="1585307464585" duration="12000" />
+      <workItem from="1585386855164" duration="65000" />
+      <workItem from="1585667351388" duration="2841000" />
+      <workItem from="1585707123155" duration="19160000" />
+      <workItem from="1585792540276" duration="599000" />
+      <workItem from="1585820246538" duration="393000" />
+      <workItem from="1585822633014" duration="8177000" />
+      <workItem from="1585871236193" duration="3967000" />
+      <workItem from="1585900308352" duration="9565000" />
+      <workItem from="1585966602971" duration="3786000" />
+      <workItem from="1585980524178" duration="3750000" />
+      <workItem from="1586003547817" duration="4667000" />
+      <workItem from="1586009500827" duration="8788000" />
+      <workItem from="1586060779259" duration="96000" />
+      <workItem from="1586071238572" duration="7702000" />
+      <workItem from="1586095835133" duration="5932000" />
+      <workItem from="1586138575419" duration="2367000" />
+      <workItem from="1586176163509" duration="818000" />
+      <workItem from="1586178561192" duration="624000" />
+      <workItem from="1586182397641" duration="2609000" />
+      <workItem from="1586269038632" duration="3315000" />
+      <workItem from="1586312181619" duration="1908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="634" y="260" key="FileChooserDialogImpl" timestamp="1586002647704">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="634" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586002647704" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1585228580502">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585228580502" />
+    <state x="690" y="273" key="extract.method.dialog" timestamp="1585717114601">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="273" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585717114601" />
+    <state x="334" y="126" key="new project wizard" timestamp="1585386920072">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="126" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585386920072" />
+    <state x="702" y="129" key="refactoring.ChangeSignatureDialog" timestamp="1585719510581">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="129" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585719510581" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586182742101">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586182742101" />
+  </component>
+</project>

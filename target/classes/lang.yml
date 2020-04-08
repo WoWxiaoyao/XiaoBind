@@ -1,0 +1,27 @@
+#当不想向玩家或后台发送时 可填写为 none
+#
+#请勿调整该版本号 否则会导致配置文件更新异常
+version: 1.0.0
+
+Prefix: "&6[&bXiaoBind&6]"
+NoPermission: "{prefix}&c你没有权限这样做"
+SuccessReload: "{prefix}&a重载完成!"
+FailReload: "{prefix}&c重载失败!请前往控制台查看报错."
+Executed: "{prefix}&a执行成功"
+NeedPlayer: "{prefix}&c只有玩家才能执行该操作."
+NullPlayer: "{prefix}&c玩家{player}不在线或不存在."
+NullCommand: "{prefix}&c未知指令."
+Drop: "{prefix}&c你不能丢弃绑定物品."
+Bind_AlreadyBind: "{prefix}&c绑定失败,该物品已经绑定了."
+Bind_AlreadyTag: "{prefix}&c添加Tag失败,该物品已经存在相同的Tag.&7({tag}&7)"
+Bind_FailNullItem: "{prefix}&c绑定失败,玩家需要手持一个有效物品."
+Bind_SuccessPickUp: "{prefix}&a捡起的物品已绑定."
+Bind_SuccessUse: "{prefix}&a使用的物品已绑定."
+Bind_SuccessEquip: "{prefix}&a点击/穿戴的物品已绑定."
+Bind_NoSelf_Held: "{prefix}&c你所手持的物品不是你的."
+Bind_NoSelf_Inv: "{prefix}&c你所点击的物品不是你的."
+Bind_NoSelf_PickUP: "{prefix}&c你正在捡取的物品不是你的."
+unBind_Success: "{prefix}&a解绑成功."
+unBind_FailNullItem: "{prefix}&c解绑失败,玩家需要手持一个有效物品."
+unBind_FailNoBind: "{prefix}&c解绑失败,该物品未绑定."
+KeepOnDeath: "{prefix}&a已恢复绑定物品."
