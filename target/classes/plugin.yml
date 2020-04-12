@@ -1,6 +1,6 @@
 name: XiaoBind
 main: zbv5.cn.XiaoBind.Main
-version: 1.0.0
+version: 1.1.0
 api: 1.0.0
 author: 逍遥
 permissions:
@@ -42,6 +42,9 @@ permissions:
     default: op
   XiaoBind.tags:
     description: 使用指令查询当前Tags
+    default: op
+  XiaoBind.admin:
+    description: 打开管理页面所需权限
     default: op
   XiaoBind.reload:
     description: 重载配置文件所需权限

@@ -1,8 +1,10 @@
 package zbv5.cn.XiaoBind.util;
 
 import cn.nukkit.Player;
+import cn.nukkit.inventory.PlayerInventory;
 import cn.nukkit.item.Item;
 import zbv5.cn.XiaoBind.lang.Lang;
+import zbv5.cn.XiaoBind.listener.PlayerListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,7 +40,7 @@ public class BindUtil
     {
         if((item != null) && (item.getId() != 0))
         {
-            List<String> list = getLore(item);
+            List<String> list = ItemUtil.getLore(item);
             List<String> Lore = new ArrayList<String>();
             if(list != null)
             {
@@ -99,7 +101,7 @@ public class BindUtil
                 }
                 Lore.add(Tag_Equip);
             }
-            item.setLore(PrintUtil.cc(buildLore(Lore)));
+            item.setLore(PrintUtil.cc(ItemUtil.buildLore(Lore)));
         }
         return item;
     }
@@ -108,7 +110,7 @@ public class BindUtil
     {
         if((item != null) && (item.getId() != 0))
         {
-            List<String> list = getLore(item);
+            List<String> list = ItemUtil.getLore(item);
             List<String> Lore;
 
             if((list != null) && (isBind(item)))
@@ -127,7 +129,7 @@ public class BindUtil
                 {
                     item.setLore();
                 } else {
-                    item.setLore(PrintUtil.cc(buildLore(Lore)));
+                    item.setLore(PrintUtil.cc(ItemUtil.buildLore(Lore)));
                 }
 
                 PrintUtil.PrintCommandSender(p,Lang.unBind_Success);
@@ -140,9 +142,9 @@ public class BindUtil
 
     public static boolean hasBindLore(Player p,Item item,String type)
     {
-        if((item != null) && (item.getId() != 0) && (getLore(item) != null))
+        if((item != null) && (item.getId() != 0) && (ItemUtil.getLore(item) != null))
         {
-            List<String> list = getLore(item);
+            List<String> list = ItemUtil.getLore(item);
             for(String lore:list)
             {
                 if(type.equalsIgnoreCase("Use"))
@@ -181,9 +183,9 @@ public class BindUtil
 
     public static boolean isBind(Item item)
     {
-        if((item != null) && (item.getId() != 0) && (getLore(item) != null))
+        if((item != null) && (item.getId() != 0) && (ItemUtil.getLore(item) != null))
         {
-            List<String> list = getLore(item);
+            List<String> list = ItemUtil.getLore(item);
 
             for(String lore:list)
             {
@@ -205,9 +207,9 @@ public class BindUtil
     }
     public static String getBindPlayerName(Item item)
     {
-        if((item != null) && (item.getId() != 0) && (getLore(item) != null))
+        if((item != null) && (item.getId() != 0) && (ItemUtil.getLore(item) != null))
         {
-            List<String> list = getLore(item);
+            List<String> list = ItemUtil.getLore(item);
             if(list != null)
             {
                 for(String lore:list)
@@ -222,45 +224,26 @@ public class BindUtil
         return null;
     }
 
-    private static List<String> getLore(Item item)
+    public static void checkPlayerPack(Player p)
     {
-        if((item != null) && (item.getId() != 0))
+        if(p != null)
         {
-            if(item.getLore().length == 1)
+            //遍历背包
+            for(Item item:p.getInventory().getContents().values())
             {
-                if(Arrays.toString(item.getLore()).contains("\n"))
+                if(isBind(item) &&(!isSelf(p,item)))
                 {
-                    return Arrays.asList(item.getLore()[0].split("\n"));
-                } else {
-                    List<String> list  = new ArrayList<String>();
-                    list.add(item.getLore()[0]);
-                    return list;
+                    p.getInventory().remove(item);
+                    ItemUtil.saveItem(getBindPlayerName(item),item);
                 }
             }
-        }
-        return null;
-    }
-
-    private static String buildLore(List<String> list)
-    {
-        if(list.isEmpty())
-        {
-            return null;
-        } else {
-            StringBuilder lore = new StringBuilder();
-            int size = 1;
-            for (String s :list)
+            //查询副手位
+            Item item = p.getOffhandInventory().getItem(0);
+            if(isBind(item) &&(!isSelf(p,item)))
             {
-                if(size == list.size())
-                {
-                    lore.append(s);
-                } else {
-                    lore.append(s).append("\n");
-                }
-                size ++;
+                p.getOffhandInventory().remove(item);
+                ItemUtil.saveItem(getBindPlayerName(item),item);
             }
-            return lore.toString();
         }
     }
-
 }

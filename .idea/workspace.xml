@@ -6,7 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b9a60a7-8c0b-481e-904f-caa564112cc3" name="Default Changelist" comment="" />
+    <list default="true" id="1b9a60a7-8c0b-481e-904f-caa564112cc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/command/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/command/MainCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/lang/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/lang/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/listener/PlayerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/listener/PlayerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/BindUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/BindUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/ItemUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/ItemUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/PluginUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/PluginUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/windows/AdminWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/windows/AdminWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lang.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +49,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -41,6 +60,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZfRbQCfnzuyddE44x3x6rrQoUg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -93,7 +115,17 @@
       <workItem from="1586178561192" duration="624000" />
       <workItem from="1586182397641" duration="2609000" />
       <workItem from="1586269038632" duration="3315000" />
-      <workItem from="1586312181619" duration="1908000" />
+      <workItem from="1586312181619" duration="2295000" />
+      <workItem from="1586333464643" duration="3854000" />
+      <workItem from="1586391905231" duration="6545000" />
+      <workItem from="1586441454869" duration="2184000" />
+      <workItem from="1586445499950" duration="1959000" />
+      <workItem from="1586485096402" duration="18112000" />
+      <workItem from="1586570627109" duration="2790000" />
+      <workItem from="1586610866146" duration="1210000" />
+      <workItem from="1586618266576" duration="5832000" />
+      <workItem from="1586656601246" duration="8640000" />
+      <workItem from="1586693314444" duration="10400000" />
     </task>
     <servers />
   </component>
@@ -121,9 +153,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="702" y="129" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585719510581" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586182742101">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586531384304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586182742101" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586531384304" />
   </component>
 </project>

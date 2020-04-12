@@ -4,6 +4,9 @@ package zbv5.cn.XiaoBind.lang;
 import zbv5.cn.XiaoBind.util.FileUtil;
 import zbv5.cn.XiaoBind.util.PrintUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Lang
 {
     public static String Prefix = "&6[&bXiaoBind&6]";
@@ -30,6 +33,12 @@ public class Lang
     public static String unBind_FailNoBind = "{prefix}&c解绑失败,该物品未绑定.";
 
     public static String KeepOnDeath = "{prefix}&a已恢复绑定物品.";
+    public static String KeepOnDeath_Full = "{prefix}&c背包已满,剩余物品请手动领取.";
+    public static String PickUp_Full = "{prefix}&c背包已满,剩余物品请手动领取.";
+    public static List<String> ClaimShow_noItems = new ArrayList<String>();
+    public static List<String> ClaimShow_hasItems = new ArrayList<String>();
+    public static String Receive_Full = "{prefix}&c领取中断,请清理背包后继续领取.";
+    public static String Receive_Success = "{prefix}&a领取完成,本次共取出{amount}件物品.";
     public static void LoadLang()
     {
         try
@@ -56,6 +65,12 @@ public class Lang
             unBind_FailNullItem = FileUtil.lang.getString("unBind_FailNullItem");
             unBind_FailNoBind= FileUtil.lang.getString("unBind_FailNoBind");
             KeepOnDeath = FileUtil.lang.getString("KeepOnDeath");
+            KeepOnDeath_Full  = FileUtil.lang.getString("KeepOnDeath_Full");
+            PickUp_Full  = FileUtil.lang.getString("PickUp_Full");
+            ClaimShow_noItems = FileUtil.lang.getStringList("ClaimShow_noItems");
+            ClaimShow_hasItems = FileUtil.lang.getStringList("ClaimShow_hasItems");
+            Receive_Full  = FileUtil.lang.getString("Receive_Full");
+            Receive_Success = FileUtil.lang.getString("Receive_Success");
             PrintUtil.PrintConsole("&a&l√ &a语言文件加载完成.");
         }
         catch (Exception e)

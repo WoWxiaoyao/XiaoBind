@@ -1,5 +1,5 @@
 #请勿调整该版本号 否则会导致配置文件更新异常
-version: 1.0.0
+version: 1.1.0
 
 Tag:
   #绑定lore
@@ -28,7 +28,21 @@ Setting:
   AllowClick: false
   #是否允许切换/手持绑定物品 （不是本人绑定情况下才会触发）
   AllowHeld: false
+  #是否使用手上物品建造 （不是本人绑定情况下才会触发）
+  AllowBuild: false
+  #是否使用手上物品破坏 （不是本人绑定情况下才会触发）
+  AllowBreak: false
   #是否丢弃后删除绑定物品 （不推荐启用 当服务器卡顿有可能与恢复绑定物品冲突）
   DeleteOnDrop: false
   #绑定物品是否死亡不掉落 （仅恢复已经掉落 并且是本人绑定的物品）
   KeepOnDeath: true
+  #当开启KeepOnDeath 才会触发该部分内容
+  #功能:当死亡保护时发送物品背包满了,将物品移交系统保管
+  KeepProtect: true
+  #当开启AllowDrop DeleteOnDrop才会触发该部分内容
+  #功能:绑定物品清除后,将物品移交系统保管
+  DropProtect: true
+  #功能:背包爆满导致无法捡拾,将物品移交系统保管
+  PickUpProtect: true
+  #当触发 Interact 事件并且为非本人物品时,将物品移交系统保管
+  NoSelfSend: true

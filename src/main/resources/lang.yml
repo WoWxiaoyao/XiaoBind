@@ -1,7 +1,7 @@
 #当不想向玩家或后台发送时 可填写为 none
 #
 #请勿调整该版本号 否则会导致配置文件更新异常
-version: 1.0.0
+version: 1.1.0
 
 Prefix: "&6[&bXiaoBind&6]"
 NoPermission: "{prefix}&c你没有权限这样做"
@@ -25,3 +25,11 @@ unBind_Success: "{prefix}&a解绑成功."
 unBind_FailNullItem: "{prefix}&c解绑失败,玩家需要手持一个有效物品."
 unBind_FailNoBind: "{prefix}&c解绑失败,该物品未绑定."
 KeepOnDeath: "{prefix}&a已恢复绑定物品."
+KeepOnDeath_Full: "{prefix}&c背包已满,剩余物品请手动领取."
+PickUp_Full: "{prefix}&c背包已满,剩余物品请手动领取."
+ClaimShow_noItems:
+  - "&f你没有可以找回的绑定物品."
+ClaimShow_hasItems:
+  - "&f你有&a{amount}件&f可找回的物品"
+Receive_Full: "{prefix}&c领取中断,请清理背包后继续领取."
+Receive_Success: "{prefix}&a领取完成,本次共取出{amount}件物品."

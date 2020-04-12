@@ -4,6 +4,7 @@ import zbv5.cn.XiaoBind.Main;
 import zbv5.cn.XiaoBind.command.*;
 import zbv5.cn.XiaoBind.lang.Lang;
 import zbv5.cn.XiaoBind.listener.PlayerListener;
+import zbv5.cn.XiaoBind.listener.WindowsListener;
 
 public class PluginUtil
 {
@@ -22,6 +23,7 @@ public class PluginUtil
         Main.getInstance().getServer().getCommandMap().register("BindOnUse", new BindOnUseCommand(Main.getInstance()));
         Main.getInstance().getServer().getCommandMap().register("UnBind", new UnBindCommand(Main.getInstance()));
         Main.getInstance().getServer().getPluginManager().registerEvents(new PlayerListener(), Main.getInstance());
+        Main.getInstance().getServer().getPluginManager().registerEvents(new WindowsListener(), Main.getInstance());
         //定时任务启动
         if(PlayerListener.CheckOffHand)
         {

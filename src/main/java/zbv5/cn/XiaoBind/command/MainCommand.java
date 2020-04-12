@@ -5,12 +5,22 @@ import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.PluginIdentifiableCommand;
 import cn.nukkit.command.data.CommandParameter;
+import cn.nukkit.item.Item;
+import cn.nukkit.nbt.tag.CompoundTag;
+import cn.nukkit.nbt.tag.Tag;
 import cn.nukkit.plugin.Plugin;
 import zbv5.cn.XiaoBind.Main;
 import zbv5.cn.XiaoBind.lang.Lang;
 import zbv5.cn.XiaoBind.util.BindUtil;
+import zbv5.cn.XiaoBind.util.ItemUtil;
 import zbv5.cn.XiaoBind.util.PluginUtil;
 import zbv5.cn.XiaoBind.util.PrintUtil;
+import zbv5.cn.XiaoBind.windows.AdminWindow;
+import zbv5.cn.XiaoBind.windows.ClaimWindow;
+
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.util.Arrays;
 
 public class MainCommand extends Command implements PluginIdentifiableCommand
 {
@@ -41,6 +51,8 @@ public class MainCommand extends Command implements PluginIdentifiableCommand
         {
             PrintUtil.PrintCommandSender(sender,"&6=== [&bXiaoBind&6] &6===");
             PrintUtil.PrintCommandSender(sender,"&6/"+label+" help&f[?] &7- &b查看帮助");
+            PrintUtil.PrintCommandSender(sender,"&6/"+label+" claim&7- &b打开托管物品页面");
+            PrintUtil.PrintCommandSender(sender,"&6/"+label+" open &7- &b打开逍式绑定页面");
             PrintUtil.PrintCommandSender(sender,"&6/"+label+" tags &7- &b查看当前绑定标题");
             PrintUtil.PrintCommandSender(sender,"&6/Bind &7- &b添加绑定");
             PrintUtil.PrintCommandSender(sender,"&6/BindOnEquip&f[boe] &7- &b添加装备绑定");
@@ -81,6 +93,33 @@ public class MainCommand extends Command implements PluginIdentifiableCommand
             {
                 PrintUtil.PrintCommandSender(sender,Lang.FailReload);
                 e.printStackTrace();
+            }
+            return false;
+        }
+        if((args[0].equalsIgnoreCase("claim"))||(args[0].equalsIgnoreCase("open")))
+        {
+            if(sender instanceof Player)
+            {
+                Player p = (Player)sender;
+                if(args[0].equalsIgnoreCase("claim"))
+                {
+                    if(!sender.hasPermission("XiaoBind.claim"))
+                    {
+                        PrintUtil.PrintCommandSender(sender,Lang.NoPermission);
+                        return false;
+                    }
+                    p.showFormWindow(ClaimWindow.getClaimWindow(p));
+                } else {
+                    if(!sender.hasPermission("XiaoBind.admin"))
+                    {
+                        PrintUtil.PrintCommandSender(sender,Lang.NoPermission);
+                        return false;
+                    }
+                    p.showFormWindow(AdminWindow.getAdminWindow());
+                }
+                return true;
+            } else {
+                PrintUtil.PrintCommandSender(sender,Lang.NeedPlayer);
             }
             return false;
         }
