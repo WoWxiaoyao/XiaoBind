@@ -311,7 +311,7 @@ public class PlayerListener implements Listener
             }
         }
     }
-    //1.1.0 done
+    //1.1.1 done fix bug
     @EventHandler
     public void onPlayerDamage(EntityDamageByEntityEvent e)
     {
@@ -327,16 +327,16 @@ public class PlayerListener implements Listener
                 PrintUtil.PrintCommandSender(p,Lang.Bind_SuccessUse);
                 return;
             }
-            if(NoSelfSend)
-            {
-                p.getInventory().remove(item);
-                ItemUtil.saveItem(BindUtil.getBindPlayerName(item),item);
-                return;
-            }
+
             if((BindUtil.isBind(item))&& (!BindUtil.isSelf(p,item)))
             {
                 if((p.isOp()) || p.hasPermission("XiaoBind.ignore")) return;
-
+                if(NoSelfSend)
+                {
+                    p.getInventory().remove(item);
+                    ItemUtil.saveItem(BindUtil.getBindPlayerName(item),item);
+                    return;
+                }
                 if(!Held)
                 {
                     e.setCancelled(true);

@@ -58,25 +58,11 @@ public class DataUtil
         return false;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static List<String> getNameList(Player p)
     {
         List<String> list = new ArrayList<String>();
 
         Set<String> keys = new HashSet<String>(FileUtil.data.getKeys(false));
-
         if(keys.isEmpty()) return list;
 
         for(String name:keys)

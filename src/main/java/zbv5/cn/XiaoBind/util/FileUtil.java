@@ -12,6 +12,8 @@ public class FileUtil
     public static Config lang;
     public static Config config;
     public static Config data;
+    //v1.1.1 √
+    public static Config item;
 
     public static void LoadFile()
     {
@@ -32,13 +34,20 @@ public class FileUtil
             }
             lang = new Config(new File(Main.getInstance().getDataFolder() + "/lang.yml"));
 
+            File Item_Yml = new File(Main.getInstance().getDataFolder(), "item.yml");
+            if (!Item_Yml.exists())
+            {
+                Main.getInstance().saveResource("item.yml", false);
+            }
+            item = new Config(new File(Main.getInstance().getDataFolder() + "/item.yml"));
+
             File Data_Yml = new File(Main.getInstance().getDataFolder(), "data.yml");
             if (!Data_Yml.exists())
             {
                 Main.getInstance().saveResource("data.yml", false);
             }
             data = new Config(new File(Main.getInstance().getDataFolder() + "/data.yml"));
-            //v1.1.0 检测 √
+            //v1.1.1 检测 √ config 1.1.0 lang 1.1.1
             Update();
 
             PrintUtil.PrintConsole("&a&l√ &a配置文件加载完成.");
@@ -82,9 +91,19 @@ public class FileUtil
             lang.set("ClaimShow_hasItems",list_2);
             lang.set("Receive_Full","{prefix}&c领取中断,请清理背包后继续领取.");
             lang.set("Receive_Success","{prefix}&a领取完成,本次共取出{amount}件物品.");
-            lang.set("version","1.1.0");
+            lang.set("ShortItem","{prefix}&ac你缺少一张{item_name}.");
+            lang.set("NoInteger","{prefix}&c输入值非整数.");
+            lang.set("version","1.1.1");
             lang.save();
-            PrintUtil.PrintConsole("&a&l√ &a语言文件升级至 1.1.0");
+            PrintUtil.PrintConsole("&a&l√ &a语言文件升级至 1.1.1");
+        }
+        if(Lang_version.equals("1.1.0"))
+        {
+            lang.set("ShortItem","{prefix}&ac你缺少一张{item_name}.");
+            lang.set("NoInteger","{prefix}&c输入值非整数.");
+            lang.set("version","1.1.1");
+            lang.save();
+            PrintUtil.PrintConsole("&a&l√ &a语言文件升级至 1.1.1");
         }
     }
 }

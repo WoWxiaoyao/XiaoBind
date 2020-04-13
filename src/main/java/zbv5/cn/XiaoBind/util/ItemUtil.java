@@ -5,7 +5,6 @@ import cn.nukkit.item.Item;
 import cn.nukkit.item.enchantment.Enchantment;
 import cn.nukkit.utils.ConfigSection;
 
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -40,7 +39,6 @@ public class ItemUtil
             } else {
                 FileUtil.data.set(name+".item.Meta",0);
             }
-            FileUtil.data.set(name+".item.Meta",item.getDamage());
 
             //储存物品数量
             FileUtil.data.set(name+".item.amount",item.getCount());
@@ -126,5 +124,86 @@ public class ItemUtil
             }
             return lore.toString();
         }
+    }
+
+
+
+    public static boolean TakePlayerItem(Player p, Item item)
+    {
+        boolean b = false;
+        int Count = 0;
+        for (Item i : p.getInventory().getContents().values())
+        {
+            if((i != null) && (i.hasCustomName()) && (i.getCustomName().equals(item.getCustomName())) && (Arrays.equals(item.getLore(), i.getLore())))
+            {
+                if(item.getCount()  <= i.getCount())
+                {
+                    Count = Count + i.getCount();
+                    p.getInventory().remove(i);
+                    b = true;
+                } else {
+                    b = false;
+                }
+            }
+        }
+        if(b)
+        {
+            int a = Count - item.getCount();
+            if(a > 0)
+            {
+                item.setCount(a);
+                p.getInventory().addItem(item);
+            }
+
+        }
+        return b;
+    }
+
+    public static Enchantment getEnch(int ench, int level)
+    {
+        Enchantment enchantment = Enchantment.getEnchantment(ench);
+        enchantment.setLevel(level,false);
+        return enchantment;
+    }
+
+    public static Item Card_Bind(int sl)
+    {
+        Item i = new Item(FileUtil.item.getInt("Bind.ID"),FileUtil.item.getInt("Bind.Meta"),sl);
+        i.setCustomName(PrintUtil.cc(FileUtil.item.getString("Bind.CustomName")));
+        List<String> lore = new ArrayList<>();
+        lore = FileUtil.item.getStringList("Bind.Lores");
+        if(!lore.isEmpty())
+        {
+            i.setLore(PrintUtil.cc(buildLore(lore)));
+        }
+        for (String s :FileUtil.item.getStringList("Bind.Enchant"))
+        {
+            String[] Enchs = s.split(":");
+            if(Enchs.length == 2)
+            {
+                i.addEnchantment(getEnch(Integer.parseInt(Enchs[0]),Integer.parseInt(Enchs[1])));
+            }
+        }
+        return i;
+    }
+    public static Item Card_Unbind(int sl)
+    {
+        Item i = new Item(FileUtil.item.getInt("UnBind.ID"),FileUtil.item.getInt("UnBind.Meta"),sl);
+        i.setCustomName(PrintUtil.cc(FileUtil.item.getString("UnBind.CustomName")));
+        List<String> lore = new ArrayList<>();
+        lore = FileUtil.item.getStringList("UnBind.Lores");
+        if(!lore.isEmpty())
+        {
+            i.setLore(PrintUtil.cc(buildLore(lore)));
+        }
+        for (String s :FileUtil.item.getStringList("UnBind.Enchant"))
+        {
+            String[] Enchs = s.split(":");
+            if(Enchs.length == 2)
+            {
+                i.addEnchantment(getEnch(Integer.parseInt(Enchs[0]),Integer.parseInt(Enchs[1])));
+            }
+        }
+        return i;
     }
 }

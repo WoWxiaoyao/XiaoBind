@@ -7,19 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b9a60a7-8c0b-481e-904f-caa564112cc3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/command/MainCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/command/MainCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/lang/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/lang/Lang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/listener/PlayerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/listener/PlayerListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/BindUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/BindUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/listener/WindowsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/listener/WindowsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/DataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/DataUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/FileUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/ItemUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/ItemUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/PluginUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/util/PluginUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/windows/AdminWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zbv5/cn/XiaoBind/windows/AdminWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/XiaoBind.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lang.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
@@ -52,36 +51,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1ZfRbQCfnzuyddE44x3x6rrQoUg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/新建文件夹" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../json-20190722.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15625" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,30 +117,39 @@
       <workItem from="1586610866146" duration="1210000" />
       <workItem from="1586618266576" duration="5832000" />
       <workItem from="1586656601246" duration="8640000" />
-      <workItem from="1586693314444" duration="10400000" />
+      <workItem from="1586693314444" duration="11021000" />
+      <workItem from="1586734848208" duration="8064000" />
+      <workItem from="1586768832832" duration="84000" />
+      <workItem from="1586768927093" duration="68000" />
+      <workItem from="1586769005285" duration="5982000" />
+      <workItem from="1586791249454" duration="353000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="634" y="260" key="FileChooserDialogImpl" timestamp="1586002647704">
+    <state x="552" y="161" key="#Plugins" timestamp="1586769062436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586002647704" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1585228580502">
+    <state x="552" y="161" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1586769062436" />
+    <state x="634" y="260" key="FileChooserDialogImpl" timestamp="1586786542044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585228580502" />
+    <state x="634" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586786542044" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1586769180900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586769180900" />
     <state x="690" y="273" key="extract.method.dialog" timestamp="1585717114601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="273" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585717114601" />
-    <state x="334" y="126" key="new project wizard" timestamp="1585386920072">
+    <state x="245" y="189" key="new project wizard" timestamp="1586788921521">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="126" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585386920072" />
+    <state x="245" y="189" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1586788921521" />
     <state x="702" y="129" key="refactoring.ChangeSignatureDialog" timestamp="1585719510581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

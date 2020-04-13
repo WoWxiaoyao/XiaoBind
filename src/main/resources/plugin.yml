@@ -1,6 +1,6 @@
 name: XiaoBind
 main: zbv5.cn.XiaoBind.Main
-version: 1.1.0
+version: 1.1.1
 api: 1.0.0
 author: 逍遥
 permissions:
@@ -46,6 +46,15 @@ permissions:
   XiaoBind.claim:
     description: 打开领取绑定物品页面所需权限
     default: true
+  XiaoBind.use:
+    description: 打开物品使用页面所需权限
+    default: true
+  XiaoBind.search:
+    description: 搜寻玩家背包所需权限
+    default: op
+  XiaoBind.give:
+    description: 给予玩家物品所需权限
+    default: op
   XiaoBind.admin:
     description: 打开管理页面所需权限
     default: op

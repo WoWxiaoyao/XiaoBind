@@ -39,6 +39,8 @@ public class Lang
     public static List<String> ClaimShow_hasItems = new ArrayList<String>();
     public static String Receive_Full = "{prefix}&c领取中断,请清理背包后继续领取.";
     public static String Receive_Success = "{prefix}&a领取完成,本次共取出{amount}件物品.";
+    public static String ShortItem = "{prefix}&c你缺少一张{item_name}.";
+    public static String NoInteger = "{prefix}&c输入值非整数.";
     public static void LoadLang()
     {
         try
@@ -71,6 +73,8 @@ public class Lang
             ClaimShow_hasItems = FileUtil.lang.getStringList("ClaimShow_hasItems");
             Receive_Full  = FileUtil.lang.getString("Receive_Full");
             Receive_Success = FileUtil.lang.getString("Receive_Success");
+            ShortItem = FileUtil.lang.getString("ShortItem");
+            NoInteger= FileUtil.lang.getString("NoInteger");
             PrintUtil.PrintConsole("&a&l√ &a语言文件加载完成.");
         }
         catch (Exception e)

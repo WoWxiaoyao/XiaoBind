@@ -10,10 +10,7 @@ import cn.nukkit.form.window.FormWindowSimple;
 import cn.nukkit.item.Item;
 import org.json.JSONObject;
 import zbv5.cn.XiaoBind.lang.Lang;
-import zbv5.cn.XiaoBind.util.BindUtil;
-import zbv5.cn.XiaoBind.util.DataUtil;
-import zbv5.cn.XiaoBind.util.PluginUtil;
-import zbv5.cn.XiaoBind.util.PrintUtil;
+import zbv5.cn.XiaoBind.util.*;
 import zbv5.cn.XiaoBind.windows.AdminWindow;
 import zbv5.cn.XiaoBind.windows.ClaimWindow;
 
@@ -73,6 +70,44 @@ public class WindowsListener implements Listener
                 if(ButtonName.equalsIgnoreCase(PrintUtil.cc("添加 &4捡拾Tag"))) p.getInventory().setItemInHand(BindUtil.addBind(p,item,"Pickup"));
                 if(ButtonName.equalsIgnoreCase(PrintUtil.cc("添加 &4装备Tag"))) p.getInventory().setItemInHand(BindUtil.addBind(p,item,"Equip"));
                 if(ButtonName.equalsIgnoreCase(PrintUtil.cc("添加 &4使用Tag"))) p.getInventory().setItemInHand(BindUtil.addBind(p,item,"Use"));
+            }
+            if(title.equals(PrintUtil.cc("&4&lXiaoBind - 逍式绑定&c&l玩家绑定/解绑")))
+            {
+                if((item == null) ||(item.getId()==0))
+                {
+                    PrintUtil.PrintCommandSender(p, Lang.Bind_FailNullItem);
+                    return;
+                }
+                if(ButtonName.equalsIgnoreCase(PrintUtil.cc("绑定")))
+                {
+                    if(BindUtil.isBind(item))
+                    {
+                        PrintUtil.PrintCommandSender(p, Lang.Bind_AlreadyBind);
+                        return;
+                    }
+                    if(ItemUtil.TakePlayerItem(p,ItemUtil.Card_Bind(1)))
+                    {
+                        p.getInventory().setItemInHand(BindUtil.addBind(p,item,"Bind"));
+                    } else {
+                        PrintUtil.PrintCommandSender(p,Lang.ShortItem.replace("{item_name}",ItemUtil.Card_Bind(1).getCustomName()));
+                        return;
+                    }
+                }
+                if(ButtonName.equalsIgnoreCase(PrintUtil.cc("解绑")))
+                {
+                    if(!BindUtil.isBind(item))
+                    {
+                        PrintUtil.PrintCommandSender(p, Lang.unBind_FailNoBind);
+                        return;
+                    }
+                    if(ItemUtil.TakePlayerItem(p,ItemUtil.Card_Unbind(1)))
+                    {
+                        p.getInventory().setItemInHand(BindUtil.unBind(p,item));
+                    } else {
+                        PrintUtil.PrintCommandSender(p,Lang.ShortItem.replace("{item_name}",ItemUtil.Card_Unbind(1).getCustomName()));
+                        return;
+                    }
+                }
             }
             if(title.startsWith(PrintUtil.cc("&4&lXiaoBind -")))
             {
